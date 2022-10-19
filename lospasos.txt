@@ -1,0 +1,15 @@
+pasos
+
+1.  	npm init -y
+2. 	npm install typescript -D
+2.1 	agregar "tsc": "tsc",  a package.json
+2.2 	npm run tsc -- --init
+2.3     cambiar el outDirt por un Build
+3. 	npm install express 
+4.    	npm install --save @types/express -D
+
+
+Ejecutar tsc 
+- npm run tsc
+// ejecutar el servidor 
+- npm start 
