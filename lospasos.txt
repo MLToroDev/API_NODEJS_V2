@@ -20,3 +20,21 @@ Ejecutar tsc
 -npm install --save @types/mssql
     -- pagina mssql es mssql npm 
 
+
+
+
+
+
+
+
+
+
+
+    no sirvio xd
+--intale npm install cors --save para evitar un error
+    - se agrega var cors = require('cors')
+    app.use(cors()) en index.ts
+-se intala el servidor https
+    -npm install http-server -g
+        -SE EJECUTA http-server [path]
+
