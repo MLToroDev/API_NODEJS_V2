@@ -1,9 +1,17 @@
 import { Producto } from "../model/Producto";
+import * as DaoPersona from '../DAO/producto.dao'
 
-export const GetProductos = (): Producto[] => {
-  let p: Producto[] = [];
-  p.push({Codigo: 1,Nombre: "Licra",Cantidad: 17,ValorU: 1000,PrecioV: 17000,Cliente: "Tu rajon pa dentro",});
-  return p;
+export const GetProductos = async (): Promise<Producto[]> => {
+    try {
+        let p: Producto[] = await DaoPersona.ListarPersonas();
+        return p;
+    } catch (error) {
+        throw error;
+    }
 }
 
 
+export const PostProducto = (P: Producto): boolean => {
+    console.log(P);
+    return true;
+}

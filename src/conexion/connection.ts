@@ -3,8 +3,8 @@ import {sqlConfig} from './config';
 
 export default async function GetConnection(): Promise<ConnectionPool> {
     try {
-        const con = await sql.connect(sqlConfig)
-        return con;
+        const conn = await sql.connect(sqlConfig)
+        return conn;
     } catch (error) {
         console.error(error);
         throw error;
