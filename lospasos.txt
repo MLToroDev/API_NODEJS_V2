@@ -19,22 +19,42 @@ Ejecutar tsc
 -npm install mssql
 -npm install --save @types/mssql
     -- pagina mssql es mssql npm 
-
-
-
-
-
-
-
-
-
-
-
-    no sirvio xd
 --intale npm install cors --save para evitar un error
+    -npm install --save @types/cors
+   
+
+
+
+
+
+
+
+
+
+no sirvio xd   
     - se agrega var cors = require('cors')
     app.use(cors()) en index.ts
 -se intala el servidor https
     -npm install http-server -g
         -SE EJECUTA http-server [path]
+--------------------------------------VERBOS//Front-----------------------
+GET
+$(document).ready(() => {
+    $.get("http://localhost:3000/api/producto", (rs) => {
+        console.log(rs);
+        let t = $("table");
+        rs.forEach(Producto => {
+            t.append(`<tr>
+            <td>${Producto.Codigo}</td>
+            <td>${Producto.Nombre}</td>
+            <td>${Producto.Cantidad}</td>
+            <td>${Producto.ValorU}</td>
+            <td>${Producto.PrecioV}</td>
+            <td>${Producto.Cliente}</td>
+            </tr>`);
+        });
+    })
+ });
 
+ post
+ 
