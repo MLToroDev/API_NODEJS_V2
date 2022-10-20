@@ -13,3 +13,5 @@ Ejecutar tsc
 - npm run tsc
 // ejecutar el servidor 
 - npm start 
+-se instala el servidor
+-npm install ts-node-dev -D
