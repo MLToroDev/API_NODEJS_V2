@@ -8,4 +8,6 @@ router.get('/', (req, res) => {
     res.json(ProductoController.GetProductos());
 });
 
+
+
 export default router;
