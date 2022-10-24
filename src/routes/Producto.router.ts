@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { request } from 'express';
 import * as ProductoController from '../controllers/Producto.controller';
 import { Producto } from '../model/Producto';
 
@@ -13,12 +13,13 @@ router.get('/', (_, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+/*router.post('/', (req, res) => {
     if (ProductoController.PostProducto(req.body as Producto))
-        res.status(201).send();
+        res.send(Producto);
+      
     else
         res.status(500).send();
-});
+});*/
 
 
 export default router;

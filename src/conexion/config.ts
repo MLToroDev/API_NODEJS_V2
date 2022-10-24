@@ -1,7 +1,7 @@
 export const sqlConfig = {
     user: 'sa',
-    password: '1234',
-    database: "PPI",
+    password: '12345678',
+    database: "ProyectoPPI",
     server: 'localhost',
     options: {
       encrypt: true, // for azure

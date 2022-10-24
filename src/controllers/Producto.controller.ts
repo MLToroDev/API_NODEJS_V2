@@ -11,7 +11,12 @@ export const GetProductos = async (): Promise<Producto[]> => {
 }
 
 
-export const PostProducto = (P: Producto): boolean => {
+export const PostProducto = (P: Producto)=> {
     console.log(P);
-    return true;
+    try {
+      return P;
+    } catch (error) {
+        
+    }
+   
 }
