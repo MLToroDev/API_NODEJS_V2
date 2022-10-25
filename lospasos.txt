@@ -1,0 +1,61 @@
+pasos
+
+1.  	npm init -y
+2. 	npm install typescript -D
+2.1 	agregar "tsc": "tsc",  a package.json
+2.2 	npm run tsc -- --init
+2.3     cambiar el outDirt por un Build
+3. 	npm install express 
+4.    	npm install --save @types/express -D
+    4.1  npm install express-validation
+
+
+Ejecutar tsc 
+- npm run tsc
+// ejecutar el servidor 
+- npm start 
+-se instala el servidor
+-npm install ts-node-dev -D se pone en el package.json
+- se intalal el driver de sql
+-npm install mssql
+-npm install --save @types/mssql
+    -- pagina mssql es mssql npm 
+--intale npm install cors --save para evitar un error
+    -npm install --save @types/cors
+   
+
+
+
+
+
+
+
+
+
+no sirvio xd   
+    - se agrega var cors = require('cors')
+    app.use(cors()) en index.ts
+-se intala el servidor https
+    -npm install http-server -g
+        -SE EJECUTA http-server [path]
+--------------------------------------VERBOS//Front-----------------------
+GET
+$(document).ready(() => {
+    $.get("http://localhost:3000/api/producto", (rs) => {
+        console.log(rs);
+        let t = $("table");
+        rs.forEach(Producto => {
+            t.append(`<tr>
+            <td>${Producto.Codigo}</td>
+            <td>${Producto.Nombre}</td>
+            <td>${Producto.Cantidad}</td>
+            <td>${Producto.ValorU}</td>
+            <td>${Producto.PrecioV}</td>
+            <td>${Producto.Cliente}</td>
+            </tr>`);
+        });
+    })
+ });
+
+ post
+ 
