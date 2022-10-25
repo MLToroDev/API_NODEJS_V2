@@ -14,15 +14,17 @@ export const ListarPersonas = async (): Promise<Producto[]> => {
         throw error;
     }
 }
-/*export const AgregarPersonas = async (p: Producto):  => {
+export async function AgregarPersonas(p: Producto):Promise<boolean> {
    try {
-    let tsql = `Insert into Producto values (${p.Codigo},${p.Nombre},${p.Cantidad},`;
+    let tsql = `Insert into Producto (Codigo, Nombre,Cantidad,ValorU,PrecioV,Cliente) values (${p.Codigo},'${p.Nombre}',${p.Cantidad},${p.ValorU},${p.PrecioV},'${p.Cliente}')`;
         const pool = await GetConnection();
-        let rs = await pool.query<Producto>(tsql);
+        let rs = await pool.query(tsql);
         if (rs != undefined) {
-            return rs.recordset;
+            return rs.recordset.length==1;
+            
         }
+        return false
    } catch (error) {
-    
+    throw error;
    }
-}*/
+}

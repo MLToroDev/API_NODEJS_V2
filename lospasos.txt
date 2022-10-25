@@ -7,6 +7,7 @@ pasos
 2.3     cambiar el outDirt por un Build
 3. 	npm install express 
 4.    	npm install --save @types/express -D
+    4.1  npm install express-validation
 
 
 Ejecutar tsc 

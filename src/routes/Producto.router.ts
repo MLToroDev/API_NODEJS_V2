@@ -13,13 +13,19 @@ router.get('/', (_, res) => {
         });
 });
 
-/*router.post('/', (req, res) => {
-    if (ProductoController.PostProducto(req.body as Producto))
-        res.send(Producto);
+router.post('/', (req, res) => {
+    ProductoController.PostProducto(req.body as Producto)
+    .then((f)=>{
+     if(f)
+        res.status(200).send();
+       else
+       res.status(500).send();
+     }).catch{
+          
+        }
+
       
-    else
-        res.status(500).send();
-});*/
+});
 
 
 export default router;
