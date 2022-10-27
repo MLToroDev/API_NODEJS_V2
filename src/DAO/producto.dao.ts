@@ -20,10 +20,11 @@ export async function AgregarPersonas(p: Producto):Promise<boolean> {
         const pool = await GetConnection();
         let rs = await pool.query(tsql);
         if (rs != undefined) {
-            return rs.recordset.length==1;
+
+            return rs.rowsAffected.length==1;
             
         }
-        return false
+        return false;
    } catch (error) {
     throw error;
    }
