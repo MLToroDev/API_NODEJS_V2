@@ -12,10 +12,10 @@ export const GetProductos = async (): Promise<Producto[]> => {
 
 
 export const PostProducto = async (P: Producto): Promise<boolean>=> {
-    console.log(P);
+    
     try {
        return DaoPersona.AgregarPersonas(P);
-      return true;
+      
     } catch (error) {
         throw error;
     }
