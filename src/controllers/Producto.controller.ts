@@ -21,3 +21,12 @@ export const PostProducto = async (P: Producto): Promise<boolean>=> {
     }
    
 }
+
+export const BuscarProductos = async (Codigo: String): Promise<Producto[]> => {
+    try {
+        let p: Producto[] = await DaoPersona.BuscarProductos(Codigo);
+        return p;
+    } catch (error) {
+        throw error;
+    }
+}

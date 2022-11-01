@@ -20,12 +20,23 @@ export async function AgregarPersonas(p: Producto):Promise<boolean> {
         const pool = await GetConnection();
         let rs = await pool.query(tsql);
         if (rs != undefined) {
-
             return rs.rowsAffected.length==1;
-            
         }
         return false;
    } catch (error) {
     throw error;
    }
+}
+export const BuscarProductos = async (codigo: String): Promise<Producto[]> => {
+    try {
+        let tsql = `SELECT * FROM Producto where codigo = ${codigo}`;
+        const pool = await GetConnection();
+        let rs = await pool.query<Producto>(tsql);
+        if (rs != undefined) {
+            return rs.recordset;
+        }
+        return [];
+    } catch (error) {
+        throw error;
+    }
 }

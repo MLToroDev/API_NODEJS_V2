@@ -31,3 +31,8 @@ export const ValidateCreate = [
         Validar(req, res, next);
     }
 ]
+export const validateshearch = [
+    check('Codigo').exists()
+    .withMessage("La propiedad es requerida")
+    .notEmpty()
+]
