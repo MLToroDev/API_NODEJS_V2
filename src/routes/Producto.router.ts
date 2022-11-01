@@ -13,6 +13,8 @@ router.get('/', (_, res) => {
             res.status(500).json(e);
         });
 });
+
+
 router.post('/',  Validaciones.ValidateCreate, (req: express.Request, res: express.Response) => {
     ProductoController.PostProducto(req.body as Producto)
     .then((f) => {
@@ -23,6 +25,15 @@ router.post('/',  Validaciones.ValidateCreate, (req: express.Request, res: expre
     }).catch((e) => {
         res.status(500).json(e);
     });
+});
+
+router.get('/:id', (req: express.Request, res: express.Response) => {
+    ProductoController.BuscarProductos(req.params.id)
+        .then((obj) => {
+            res.json(obj);
+        }).catch((e) => {
+            res.status(500).json(e);
+        });
 });
 
 export default router;
