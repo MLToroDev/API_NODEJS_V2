@@ -27,7 +27,7 @@ router.post('/',  Validaciones.ValidateCreate, (req: express.Request, res: expre
     });
 });
 
-router.get('/:id', (req: express.Request, res: express.Response) => {
+router.get('/buscar/:id',Validaciones.validatesbuscar, (req: express.Request, res: express.Response) => {
     ProductoController.BuscarProductos(req.params.id)
         .then((obj) => {
             res.json(obj);
