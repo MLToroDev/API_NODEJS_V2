@@ -13,5 +13,5 @@ app.use(cors());
 app.use('/api/producto', ProductoRouter);
 
 app.listen(PORT, () => {
-    console.log(`Servidor conectado puerto ${PORT}`)
+    console.log(`Servidor conectado ${PORT}`)
 });
